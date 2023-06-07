@@ -36,7 +36,7 @@ input {
     max-width: 100%;
 }
 
-.card :where(input, button) {
+.card :where(input, button, label) {
     cursor: pointer;
     font-family: inherit;
     font-size: inherit;
@@ -160,6 +160,7 @@ body {
     background-color: hsla(var(--clr-neutral-hsl-100), 0.05);
     color: var(--clr-neutral-500);
     display: grid;
+    isolation: isolate;
     place-content: center;
     position: relative;
 }
@@ -168,9 +169,25 @@ body {
     position: absolute;
 }
 
-.card__rating-radio:has(input[type='radio']:hover) {
+.card__rating-radio > input[type='radio']:hover {
     background-color: var(--clr-primary);
+    z-index: -1;
+}
+
+.card__rating-radio > input[type='radio']:hover + label {
     color: var(--clr-neutral-100);
+    z-index: 1;
+}
+
+.card__rating-radio > input[type='radio']:checked {
+    background-color: var(--clr-neutral-500);
+    color: var(--clr-neutral-100);
+    z-index: -1;
+}
+
+.card__rating-radio > input[type='radio']:checked + label {
+    color: var(--clr-neutral-100);
+    z-index: 1;
 }
 
 .card__rating-selector
@@ -180,11 +197,6 @@ body {
     ) {
     outline: 2px solid var(--clr-primary);
     outline-offset: 5px;
-}
-
-.card__rating-radio:has(input[type='radio']:checked) {
-    background-color: var(--clr-neutral-500);
-    color: var(--clr-neutral-100);
 }
 
 .card__thank-you-state {
