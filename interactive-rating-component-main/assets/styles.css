@@ -101,7 +101,6 @@ body {
     border-radius: 2rem;
     color: var(--clr-neutral-100);
     font-size: var(--fs-400);
-    font-weight: var(--fw-normal);
     letter-spacing: 2px;
     padding: 0.8rem;
     text-transform: uppercase;
