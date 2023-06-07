@@ -1,0 +1,145 @@
+:root {
+    --font-default: 'Lexend Deca', sans-serif;
+    --font-accent: 'Big Shoulders Display', cursive;
+
+    --fs-400: 1rem;
+    --fs-500: 2.8rem;
+
+    --fw-normal: 400;
+    --fw-bold: 700;
+
+    --clr-accent-1: hsl(31, 77%, 52%);
+    --clr-accent-2: hsl(184, 100%, 22%);
+    --clr-accent-3: hsl(179, 100%, 13%);
+
+    --clr-neutral-50: hsla(0, 0%, 100%, 0.75);
+    --clr-neutral-100: hsl(0, 0%, 95%);
+}
+
+/* RESETS */
+
+* {
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+/* UTILITY CLASSES */
+
+.grid-flow {
+    grid-auto-flow: row;
+}
+
+@media screen and (min-width: 900px) {
+    .grid-flow {
+        grid-auto-flow: column;
+    }
+}
+
+/* PAGE STYLING */
+
+html {
+    font-size: 15px;
+}
+
+body {
+    display: grid;
+    color: var(--clr-neutral-50);
+    background-color: var(--clr-neutral-100);
+    font-family: var(--font-default);
+    font-size: var(--fs-400);
+    font-weight: var(--fw-normal);
+    place-content: center;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+.card--accent-1 {
+    --accent-color: var(--clr-accent-1);
+}
+.card--accent-2 {
+    --accent-color: var(--clr-accent-2);
+}
+.card--accent-3 {
+    --accent-color: var(--clr-accent-3);
+}
+
+.button {
+    background-color: var(--clr-neutral-100);
+    border: 2px solid transparent;
+    border-radius: 2rem;
+    color: var(--accent-color);
+    padding: .85rem 2rem;
+}
+
+.button:hover {
+    background-color: var(--accent-color);
+    color: var(--clr-neutral-100);
+    border: 2px solid var(--clr-neutral-100);
+}
+
+.button:focus-visible {
+    outline: 2px solid var(--clr-neutral-100);
+    outline-offset: 4px;
+}
+
+.cards {
+    border-radius: .5rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 6rem .5rem;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 900px) {
+    .cards {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+
+.card {
+    align-items: start;
+    background-color: var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    max-width: 327px;
+    min-height: 442px;
+    padding: 3.23rem;
+}
+
+@media screen and (min-width: 900px) {
+    .card {
+        max-width: 308px;
+        min-height: 500px;
+    }
+}
+
+.card__title {
+    color: var(--clr-neutral-100);
+    font-family: var(--font-accent);
+    font-size: var(--fs-500);
+    margin-block: 0.8em 0.63em;
+    text-transform: uppercase;
+}
+
+.card__text {
+    flex-grow: 1;
+    line-height: 1.6;
+    margin-block-end: 1em;
+}
