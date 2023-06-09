@@ -127,8 +127,10 @@ body {
 .card__stats {
     box-shadow: 0 -1px 0 hsla(var(--clr-neutral-hsl-400), 0.15);
     font-size: var(--fs-200);
-    justify-content: space-between;
-    padding: 1.3rem 3rem 1rem;
+    display: grid;
+    row-gap: .5rem;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr) );
+    padding: 1.3rem 1.7rem 1rem;
 }
 
 .card__stat {
