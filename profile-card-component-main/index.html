@@ -15,25 +15,33 @@
 <body>
   <main>
     <div class="card">
-      <img class="card__hero" src="assets/images/bg-pattern-card.svg" alt="">
-      <img class="card__user-avatar" src="./assets/images/image-victor.jpg" alt="">
-      <div class="card__user-info">
-        <h1 class="card__text-accent">Victor Crest</h1>
-        <span>26</span>
-        <p class="card__location">London</p>
+      <div class="card__header">
+        <img src="assets/images/bg-pattern-card.svg" alt="">
       </div>
-      <div class="card__stats">
-        <div>
-          <span class="card__text-accent">80K</span>
-          <p class="card__stat-name">Followers</p>
+      <div class="card__content">
+        <div class="card__heading">
+          <img class="card__user-avatar" src="./assets/images/image-victor.jpg" alt="">
+          <div class="card__user">
+            <div class="card__user-info flex-group">
+              <h1 class="card__accent">Victor Crest</h1>
+              <span>26</span>
+            </div>
+            <p class="card__user-location">London</p>
+          </div>
         </div>
-        <div>
-          <span class="card__text-accent">803K</span>
-          <p class="card__stat-name">Likes</p>
-        </div>
-        <div>
-          <span class="card__text-accent">1.4K</span>
-          <p class="card__stat-name">Photos</p>
+        <div class="card__stats flex-group">
+          <div>
+            <span class="card__accent">80K</span>
+            <p class="card__stat">Followers</p>
+          </div>
+          <div>
+            <span class="card__accent">803K</span>
+            <p class="card__stat">Likes</p>
+          </div>
+          <div>
+            <span class="card__accent">1.4K</span>
+            <p class="card__stat">Photos</p>
+          </div>
         </div>
       </div>
     </div>
