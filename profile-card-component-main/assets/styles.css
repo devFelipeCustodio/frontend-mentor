@@ -10,6 +10,7 @@
 
     --clr-primary-300: hsl(185, 75%, 39%);
     --clr-primary-400: hsl(227, 10%, 46%);
+    --clr-primary-hsl-500: 229, 23%, 23%;
     --clr-primary-500: hsl(229, 23%, 23%);
 
     --clr-neutral-100: hsl(0, 0%, 100%);
@@ -39,9 +40,9 @@ svg {
 
 .flex-group {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     gap: 0.4rem;
+    justify-content: center;
 }
 
 /* PAGE STYLING */
@@ -65,7 +66,7 @@ body {
     place-content: center;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 799px) {
     body {
         background-position: right 150px bottom 400px, left 170px top 350px;
         background-size: cover;
@@ -73,46 +74,44 @@ body {
 }
 
 .card {
-    --border-radius: 1rem;
+    background-color: var(--clr-neutral-100);
+    border-radius: 1rem;
+    box-shadow: 0 20px 20px 5px hsla(var(--clr-primary-hsl-500), .2);
     margin-inline: 1rem;
     max-width: 350px;
+    text-align: center;
+    overflow: hidden;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 799px) {
     .card {
         max-width: 327px;
     }
 }
 
-.card__header {
-    border-radius: var(--border-radius) var(--border-radius) 0 0;
-    overflow: hidden;
+.card__hero {
+    object-fit: cover;
+    min-height: 140px;
 }
 
 .card__content {
-    background-color: var(--clr-neutral-100);
-    border-radius: 0 0 var(--border-radius) var(--border-radius);
-    text-align: center;
-}
-
-.card__heading {
     display: grid;
     justify-items: center;
     position: relative;
 }
 
-.card__user {
-    display: grid;
-    gap: 0.5rem;
-    letter-spacing: 0.5px;
-    padding: 4rem 3rem 1.5rem;
-}
-
-.card__user-avatar {
+.card__avatar {
     border-radius: 50%;
     outline: 6px solid var(--clr-neutral-100);
     position: absolute;
     top: -48px;
+}
+
+.card__user-info {
+    display: grid;
+    gap: 0.5rem;
+    letter-spacing: 0.5px;
+    padding: 4rem 3rem 1.5rem;
 }
 
 .card__accent {
@@ -121,7 +120,7 @@ body {
     font-weight: var(--fw-bold);
 }
 
-.card__user-location {
+.card__location {
     font-size: var(--fs-300);
 }
 
