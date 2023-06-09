@@ -66,7 +66,7 @@ body {
     place-content: center;
 }
 
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 599px) {
     body {
         background-position: right 150px bottom 400px, left 170px top 350px;
         background-size: cover;
@@ -76,14 +76,14 @@ body {
 .card {
     background-color: var(--clr-neutral-100);
     border-radius: 1rem;
-    box-shadow: 0 20px 20px 5px hsla(var(--clr-primary-hsl-500), .2);
+    box-shadow: 0 20px 20px 5px hsla(var(--clr-primary-hsl-500), 0.2);
     margin-inline: 1rem;
     max-width: 350px;
     text-align: center;
     overflow: hidden;
 }
 
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 599px) {
     .card {
         max-width: 327px;
     }
