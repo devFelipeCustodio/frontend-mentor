@@ -212,7 +212,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     color: var(--clr-neutral-100);
-    font-weight: var(--fw-normal);
+    font-weight: var(--fw-medium);
 }
 
 @media screen and (max-width: 1110px) {
@@ -226,13 +226,7 @@ body {
 .card {
     background-color: var(--clr-primary-800);
     border-radius: 0.5rem;
-    padding: 2.5em 2.3em;
-}
-
-@media screen and (max-width: 1110px) {
-    .card {
-        padding: 1.95em 2.3em;
-    }
+    padding: 1.95em 2em;
 }
 
 .card:nth-child(2) {
