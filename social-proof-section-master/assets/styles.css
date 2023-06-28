@@ -260,6 +260,7 @@ body {
 
 .verified {
     color: var(--clr-primary-300);
+    font-weight: var(--fw-normal);
 }
 
 .testemonial {
