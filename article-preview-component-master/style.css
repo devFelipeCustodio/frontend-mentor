@@ -39,7 +39,7 @@ body {
 .card {
     display: flex;
     flex-wrap: wrap;
-    filter: drop-shadow(0 1rem 50px hsla(var(--clr-primary-hsl-400), 0.15));
+    filter: drop-shadow(0 2rem 20px hsla(var(--clr-primary-hsl-400), 0.13));
 }
 
 .card__header {
