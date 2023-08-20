@@ -39,13 +39,12 @@ body {
 .card {
     display: flex;
     flex-wrap: wrap;
-    box-shadow: 0 1rem 50px hsla(var(--clr-primary-hsl-400), 0.15);
+    filter: drop-shadow(0 1rem 50px hsla(var(--clr-primary-hsl-400), 0.15));
 }
 
 .card__header {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    overflow: hidden;
     width: 285px;
     background-repeat: no-repeat;
     background-size: 123% 100%;
