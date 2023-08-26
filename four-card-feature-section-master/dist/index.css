@@ -1,17 +1,17 @@
 @font-face {
   font-family: Poppins;
   font-weight: 200;
-  src: url("/assets/fonts/Poppins-ExtraLight.ttf");
+  src: url("./assets/fonts/Poppins-ExtraLight.ttf");
 }
 @font-face {
   font-family: Poppins;
   font-weight: 400;
-  src: url("/assets/fonts/Poppins-Regular.ttf");
+  src: url("./assets/fonts/Poppins-Regular.ttf");
 }
 @font-face {
   font-family: Poppins;
   font-weight: 600;
-  src: url("/assets/fonts/Poppins-SemiBold.ttf");
+  src: url("./assets/fonts/Poppins-SemiBold.ttf");
 }
 * {
   box-sizing: border-box;
