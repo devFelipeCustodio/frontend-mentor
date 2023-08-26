@@ -134,6 +134,9 @@ p {
 }
 
 @media screen and (min-width: 768px) {
+  :root {
+    font-size: 15.7px;
+  }
   .section-title {
     font-size: 2.3rem;
   }
