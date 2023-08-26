@@ -1,0 +1,39 @@
+@font-face 
+    font-family: Poppins
+    font-weight: 200
+    src: url('/assets/fonts/Poppins-ExtraLight.ttf') 
+    
+@font-face
+    font-family: Poppins
+    font-weight: 400
+    src: url('/assets/fonts/Poppins-Regular.ttf') 
+    
+@font-face
+    font-family: Poppins
+    font-weight: 600
+    src: url('/assets/fonts/Poppins-SemiBold.ttf') 
+    
+@mixin box-model-reset()
+    margin: 0
+    padding: 0
+
+*
+    box-sizing: border-box
+    line-height: 1
+    @include box-model-reset
+
+    &::before, &::after
+        @include box-model-reset
+        
+
+
+
+img, svg 
+    max-width: 100%
+    display: block
+
+    
+
+
+
+    

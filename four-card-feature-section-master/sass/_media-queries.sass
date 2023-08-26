@@ -1,0 +1,39 @@
+@use "sass:map"
+    
+$breakpoints: ("md": 768px, "xlg": 1200px)
+
+@media screen and ( min-width: map.get($breakpoints, "md") )
+
+    .section-title
+        font-size: 2.3rem
+
+    .cards
+        align-items: center
+
+    .card 
+        width: 600px
+        padding: 2.3rem 2rem
+
+        &__text
+            letter-spacing: .3px
+
+        img
+            width: 65px
+
+
+@media screen and ( min-width: map.get($breakpoints, "xlg") )
+    body
+        max-width: 1150px
+        margin: 6rem auto
+
+    .cards 
+        flex-direction: row
+        align-items: center
+
+    .card 
+        max-width: 350px
+        height: 252px
+
+
+
+    

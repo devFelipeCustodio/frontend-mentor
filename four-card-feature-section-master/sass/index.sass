@@ -1,0 +1,97 @@
+@import '_config.sass'
+@import '_variables.sass'
+
+body 
+    font-size: $fs-mobile
+    font-family: $ff-default
+    color: $clr-neutral-400
+    background-color: $clr-neutral-300
+    margin: 5.5rem 2rem
+    text-align: center
+    
+p
+    line-height: 1.6
+
+.section-header
+    margin: 0 auto
+    margin-bottom: 4rem
+    max-width: 55ch
+
+.section-title
+    color: $clr-neutral-500
+    font-weight: $fw-light
+    font-size: 1.55rem
+
+    &--bold 
+        margin-top: .5em
+        margin-bottom: .9em
+        display: block
+        font-weight: $fw-bold
+        
+@mixin flex-flow()
+    display: flex
+    flex-direction: column
+    justify-content: center
+    gap: 2rem
+
+.cards, .stack-of-two
+    @include flex-flow    
+
+.card
+    min-height: 225px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    text-align: left
+    padding: 2rem
+    border-radius: 10px
+    overflow: hidden
+    box-shadow: 0 13px 1rem adjust-color(darken($clr-primary-blue, 30%), $alpha: -0.85)
+    position: relative
+
+    &__title
+        color: $clr-neutral-500
+        font-size: 1.25rem
+        margin-bottom: .5em
+
+    &__text
+        font-size: .8rem
+
+    $border-top-width: 4px
+
+    @mixin border-top()
+        content: ''
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: $border-top-width
+        filter: blur(1px)
+
+    &--cyan 
+        &::before
+            @include border-top
+            background-color: $clr-primary-cyan
+
+    &--red 
+        &::before
+            @include border-top
+            background-color: $clr-primary-red   
+
+    &--orange 
+        &::before
+            @include border-top
+            background-color: $clr-primary-orange       
+                
+    &--blue 
+        &::before
+            @include border-top
+            background-color: $clr-primary-blue  
+
+    img
+        width: 58px
+        align-self: end
+        margin-top: 2rem
+
+
+@import '_media-queries.sass'
