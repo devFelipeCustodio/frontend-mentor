@@ -1,0 +1,94 @@
+@use 'sass:map';
+
+$breakpoints: (
+    'lg': 992px,
+);
+
+@media screen and (min-width: map.get($breakpoints, 'lg')) {
+    body {
+        font-size: $fs-500;
+        min-height: 100vh;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 58% 42%;
+        grid-template-areas: 'content hero';
+        min-height: 100vh;
+    }
+
+    .main-header {
+        position: relative;
+        padding: 0;
+        margin-top: 3rem;
+        margin-bottom: 5rem;
+        .logo-image {
+            scale: 1;
+        }
+    }
+
+    .hero-image {
+        margin: 0;
+        background-image: url(../images/hero-desktop.jpg);
+        grid-area: hero;
+        background-size: cover;
+        background-position: center center;
+        height: 100%;
+    }
+
+    .wrapper {
+        min-height: 100vh;
+        background-image: url(../images/bg-pattern-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-area: content;
+        background-position: center center;
+        padding-right: 5rem;
+    }
+
+    .content {
+        text-align: left;
+        padding: 0;
+        &__title {
+            margin: 0 0 1rem 0;
+            font-size: $fs-700;
+            letter-spacing: 15px;
+        }
+
+        &__text {
+            line-height: 1.8;
+            font-weight: 400;
+        }
+    }
+
+    $input-padding: 2rem;
+
+    .newsletter-form {
+        $btn-width: 100px;
+        $btn-height: 58px;
+        margin-top: 2.5rem;
+
+        &__input {
+            min-height: $btn-height;
+            padding: 2px $btn-width 0 $input-padding;
+
+            &::placeholder {
+                font-size: $fs-400;
+            }
+        }
+
+        &__btn {
+            width: $btn-width;
+            height: $btn-height;
+        }
+
+        &__error-icon {
+            right: calc(1rem + $btn-width);
+            scale: 1;
+        }
+    }
+
+    .error-message {
+        padding-left: $input-padding;
+    }
+}

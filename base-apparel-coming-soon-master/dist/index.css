@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: hsl(0, 36%, 70%);
+  background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  background-repeat: no-repeat;
+  min-height: calc(100vh - 80px);
+}
+
+.main-header {
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 0.7rem;
+  position: absolute;
+  top: 0;
+}
+.main-header .logo-image {
+  scale: 0.7;
+}
+
+.hero-image {
+  margin-top: 80px;
+  background-image: url(../images/hero-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 250px;
+}
+
+.container {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.content {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.content__title {
+  max-width: 10ch;
+  margin: 0 auto 1.4rem;
+  letter-spacing: 9px;
+  line-height: 1.1;
+  font-size: 2.55rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.content__title span {
+  font-weight: 600;
+  color: hsl(0, 6%, 24%);
+}
+.content__text {
+  line-height: 1.6;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.2rem;
+  position: relative;
+}
+.newsletter-form__input {
+  color: hsl(0, 6%, 24%);
+  background: transparent;
+  border: 1px solid rgba(206, 189, 189, 0.8);
+  min-width: 100%;
+  min-height: 48px;
+  border-radius: 100vw;
+  padding: 2px 65px 0 1.5rem;
+  display: flex;
+}
+.newsletter-form__input:focus-within {
+  outline: none;
+}
+.newsletter-form__input.error {
+  border: 2px solid hsl(0, 93%, 68%);
+}
+.newsletter-form__input::placeholder {
+  font-size: 0.875rem;
+  opacity: 0.4;
+  color: hsl(0, 36%, 70%);
+}
+.newsletter-form__btn {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border: none;
+  width: 65px;
+  height: 48px;
+  border-radius: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 14px rgba(249, 98, 98, 0.4);
+}
+.newsletter-form__btn:hover {
+  background-image: none;
+  background-color: hsl(0, 80%, 86%);
+}
+.newsletter-form__error-icon {
+  visibility: hidden;
+  position: absolute;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  right: 75px;
+  scale: 0.9;
+}
+.newsletter-form__error-icon.show {
+  visibility: visible;
+}
+
+.error-message {
+  visibility: hidden;
+  margin-top: 10px;
+  padding-left: 1.5rem;
+  font-size: 0.8125rem;
+  text-align: left;
+  color: hsl(0, 93%, 68%);
+}
+.error-message.show {
+  visibility: visible;
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    font-size: 1rem;
+    min-height: 100vh;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 58% 42%;
+    grid-template-areas: "content hero";
+    min-height: 100vh;
+  }
+  .main-header {
+    position: relative;
+    padding: 0;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+  }
+  .main-header .logo-image {
+    scale: 1;
+  }
+  .hero-image {
+    margin: 0;
+    background-image: url(../images/hero-desktop.jpg);
+    grid-area: hero;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+  }
+  .wrapper {
+    min-height: 100vh;
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: content;
+    background-position: center center;
+    padding-right: 5rem;
+  }
+  .content {
+    text-align: left;
+    padding: 0;
+  }
+  .content__title {
+    margin: 0 0 1rem 0;
+    font-size: 4rem;
+    letter-spacing: 15px;
+  }
+  .content__text {
+    line-height: 1.8;
+    font-weight: 400;
+  }
+  .newsletter-form {
+    margin-top: 2.5rem;
+  }
+  .newsletter-form__input {
+    min-height: 58px;
+    padding: 2px 100px 0 2rem;
+  }
+  .newsletter-form__input::placeholder {
+    font-size: 0.9375rem;
+  }
+  .newsletter-form__btn {
+    width: 100px;
+    height: 58px;
+  }
+  .newsletter-form__error-icon {
+    right: calc(1rem + 100px);
+    scale: 1;
+  }
+  .error-message {
+    padding-left: 2rem;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

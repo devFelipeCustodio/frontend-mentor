@@ -1,0 +1,154 @@
+@import '_config.scss';
+@import '_variables.scss';
+
+$mobile-header-height: 80px;
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: $fs-300;
+    font-weight: $fw-bold;
+    color: $clr-primary-400;
+    background-image: $linear-grad-neutral;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - $mobile-header-height);
+}
+
+
+.main-header {
+    height: $mobile-header-height;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 0.7rem;
+    position: absolute;
+    top: 0;
+
+    .logo-image {
+        scale: 0.7;
+    }
+}
+
+.hero-image {
+    margin-top: $mobile-header-height;
+    background-image: url(../images/hero-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 250px;
+}
+
+.container {
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.content {
+    padding: 4rem 2rem;
+    text-align: center;
+
+    &__title {
+        max-width: 10ch;
+        margin: 0 auto 1.4rem;
+        letter-spacing: 9px;
+        line-height: 1.1;
+        font-size: $fs-600;
+        font-weight: $fw-light;
+        text-transform: uppercase;
+
+        span {
+            font-weight: $fw-bold;
+            color: $clr-neutral-400;
+        }
+    }
+
+    &__text {
+        line-height: 1.6;
+    }
+}
+
+$input-padding: 1.5rem;
+
+.newsletter-form {
+    $border-radius: 100vw;
+    $btn-width: 65px;
+    $btn-height: 48px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.2rem;
+    position: relative;
+
+    &__input {
+        color: $clr-neutral-400;
+        background: transparent;
+        border: 1px solid
+            adjust-color($clr-primary-400, $whiteness: 15%, $alpha: -0.2);
+        min-width: 100%;
+        min-height: $btn-height;
+        border-radius: $border-radius;
+        padding: 2px $btn-width 0 $input-padding;
+        display: flex;
+
+        &:focus-within {
+            outline: none;
+        }
+
+        &.error {
+            border: 2px solid $clr-primary-500;
+        }
+
+        &::placeholder {
+            font-size: $fs-300;
+            opacity: 0.4;
+            color: $clr-primary-400;
+        }
+    }
+
+    &__btn {
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        background-image: $linear-grad-primary;
+        border: none;
+        width: $btn-width;
+        height: $btn-height;
+        border-radius: $border-radius;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 10px 14px adjust-color($clr-primary-500, $alpha: -0.6);
+
+        &:hover {
+            background-image: none;
+            background-color: hsl(0, 80%, 86%);
+        }
+    }
+
+    &__error-icon {
+        visibility: hidden;
+        position: absolute;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        right: $btn-width + 10px;
+        scale: 0.9;
+
+        &.show {
+            visibility: visible;
+        }
+    }
+}
+
+.error-message {
+    visibility: hidden;
+    margin-top: 10px;
+    padding-left: $input-padding;
+    font-size: $fs-200;
+    text-align: left;
+    color: $clr-primary-500;
+
+    &.show {
+        visibility: visible;
+    }
+}
+
+@import '_media-queries.scss';
